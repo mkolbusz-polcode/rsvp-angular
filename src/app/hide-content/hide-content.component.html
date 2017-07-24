@@ -1,0 +1,31 @@
+<div class="hide-content"
+     [ngClass]="{'hide-content-top': position == 'top', 'hide-content-bottom': position == 'bottom', 'open': isOpen, 'close': !isOpen}">
+
+  <a href="#" class="trigger" (click)="toggle()">
+    <span aria-hidden="true" *ngIf="!isOpen"><i class="fa" [ngClass]="{'fa-chevron-up' : position == 'bottom', 'fa-chevron-down':position == 'top'}" aria-hidden="true"></i></span>
+    <span aria-hidden="true" *ngIf="isOpen"><i class="fa" [ngClass]="{'fa-chevron-up' : position == 'top', 'fa-chevron-down':position == 'bottom'}" aria-hidden="true"></i></span>
+  </a>
+  <div class="container content" [style.height.%]="size">
+
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <div class="header">Useful links</div>
+        <div>
+          <div class="links">
+            <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing.</a>
+            <a href="#">Cum eaque earum exercitationem molestiae officia sunt?</a>
+            <a href="#">Doloremque eagendi error fugiat ipsam officiis repudiandae?</a>
+            <a href="#">Ab, eagendi minus omnis quas ut veritatis.</a>
+            <a href="#">Adipisci debitis eos exercitationem impedit porro. Voluptas!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="header">References</div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="header">Documents</div>
+      </div>
+    </div>
+  </div>
+</div>

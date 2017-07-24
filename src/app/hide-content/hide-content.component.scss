@@ -1,0 +1,62 @@
+$font-size-base: 12px;
+
+.hide-content {
+  font-size: $font-size-base;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+  background: #333;
+  display: block;
+  z-index: 1;
+  color: #fff;
+  overflow: hidden;
+  transition: max-height 1s;
+  max-height: 100%;
+
+  &.close {
+    max-height: 3em;
+  }
+
+  .trigger {
+    color: #fff;
+    width: 100%;
+    display: block;
+    text-align: right;
+    padding: 1em;
+  }
+
+  .content {
+    margin: 3em auto;
+
+    .header {
+      font-size: 1.4em;
+      text-transform: uppercase;
+      border-bottom: solid #fff 2px;
+      padding-bottom: .4em;
+    }
+
+    .links {
+      a {
+        color: #fff;
+        display: block;
+        margin: 0.5em 0;
+      }
+    }
+  }
+
+
+
+  &-top {
+    top: 0;
+    .trigger {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  &-bottom{
+    bottom: 0;
+  }
+
+
+}
